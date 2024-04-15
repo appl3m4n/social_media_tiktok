@@ -121,24 +121,11 @@ body {
 
 @media (max-width: 300px) {
     .app_videos {
-    width: 900%;
-    height: 90%;
-    max-width: 90%;
-    border-radius: 0;
-}
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    background-color: #333; /* Adjust as needed */
-    color: white;
-    padding: 10px 20px;
-    transition: transform 0.3s ease; /* Add smooth transition for hiding/showing */
+    height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    position: relative;
+}
 }
 
-.header.hidden {
-    transform: translateY(-100%);
-}
