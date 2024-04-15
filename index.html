@@ -11,6 +11,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     </head>
         <body>
+
+        <header class="header">Header</header>
         <div class="app_videos">
         <!-- video starts -->
         <div class="video">
@@ -118,6 +120,27 @@
                     }
                 });
             });
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('.header');
+
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            header.classList.add('hidden');
+        } else {
+            // Scroll up
+            header.classList.remove('hidden');
+        }
+        
+        lastScrollTop = currentScroll;
+    });
+});
+
         </script>
         
         
