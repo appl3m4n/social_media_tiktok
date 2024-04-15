@@ -14,7 +14,7 @@
         <div class="app_videos">
         <!-- video starts -->
         <div class="video">
-                <video src="video1.mp4" class="video_player"></video>
+                <video src="video1.mp4" class="video_player" playsinline></video>
 
             <!-- sidebar  -->
             <div class="videoSidebar">
@@ -54,7 +54,7 @@
 
             <!-- video starts -->
         <div class="video">
-            <video src="video2.mp4" class="video_player"></video>
+            <video src="video2.mp4" class="video_player" playsinline></video>
 
         <!-- sidebar  -->
         <div class="videoSidebar">
@@ -99,11 +99,12 @@
                 // Select all video elements
                 const videos = document.querySelectorAll('video');
         
-                // Function to play the video
-                function playVideo(video) {
-                    // Play the video if it's paused
+                // Function to toggle play/pause of the video
+                function toggleVideo(video) {
                     if (video.paused) {
                         video.play();
+                    } else {
+                        video.pause();
                     }
                 }
         
@@ -111,14 +112,12 @@
                 videos.forEach(function(video) {
                     // Add click event listener to the video
                     video.addEventListener('click', function() {
-                        // Play the video when clicked
-                        playVideo(video);
+                        // Toggle play/pause when clicked
+                        toggleVideo(video);
                     });
                 });
             });
         </script>
-        
-        
-
+    
         </body>
     </html>
