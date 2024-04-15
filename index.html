@@ -86,12 +86,9 @@
         </div>
 
         <script>
-            // Wait for the DOM content to be fully loaded
             document.addEventListener("DOMContentLoaded", function() {
-                // Select all video elements
                 const videos = document.querySelectorAll('video');
         
-                // Function to toggle play/pause of the video
                 function toggleVideo(video) {
                     if (video.paused) {
                         video.play();
@@ -100,16 +97,30 @@
                     }
                 }
         
-                // Loop through each video
-                videos.forEach(function(video) {
-                    // Add click event listener to the video
+                videos.forEach(function(video, index) {
                     video.addEventListener('click', function() {
-                        // Toggle play/pause when clicked
                         toggleVideo(video);
                     });
+                    // Pause the second video initially
+                    if (index === 1) {
+                        video.pause();
+                    }
+                });
+        
+                // Add scroll event listener
+                window.addEventListener('scroll', function() {
+                    // Check if the user has scrolled down enough
+                    if (window.scrollY > window.innerHeight) {
+                        // Select the second video
+                        const secondVideo = document.querySelectorAll('.video_player')[1];
+                        // Play the second video
+                        toggleVideo(secondVideo);
+                    }
                 });
             });
         </script>
+        
+        
     
         </body>
     </html>
