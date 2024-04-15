@@ -121,9 +121,9 @@ body {
 
 @media (max-width: 300px) {
     .app_videos {
-    width: 100%;
+    width: 900%;
     height: 90%;
-    max-width: 100%;
+    max-width: 90%;
     border-radius: 0;
 }
 }
