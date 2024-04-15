@@ -94,15 +94,19 @@
         </div>
 
         <script>
-            const videos = document.querySelectorAll('video');
-
-            for (const video of videos) {
-                video.addEventListener('click', function() {
+            // Wait for the DOM content to be fully loaded
+            document.addEventListener("DOMContentLoaded", function() {
+                // Select all video elements
+                const videos = document.querySelectorAll('video');
+        
+                // Loop through each video
+                videos.forEach(function(video) {
+                    // Play the video if it's paused
                     if (video.paused) {
-                    video.play();
+                        video.play();
                     }
-                })
-            }
+                });
+            });
         </script>
 
         </body>
