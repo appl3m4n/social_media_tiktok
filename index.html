@@ -99,15 +99,26 @@
                 // Select all video elements
                 const videos = document.querySelectorAll('video');
         
-                // Loop through each video
-                videos.forEach(function(video) {
+                // Function to play the video
+                function playVideo(video) {
                     // Play the video if it's paused
                     if (video.paused) {
                         video.play();
                     }
+                }
+        
+                // Loop through each video
+                videos.forEach(function(video) {
+                    // Add click event listener to the video
+                    video.addEventListener('click', function() {
+                        // Play the video when clicked
+                        playVideo(video);
+                    });
                 });
             });
         </script>
+        
+        
 
         </body>
     </html>
