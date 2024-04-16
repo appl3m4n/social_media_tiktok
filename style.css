@@ -150,3 +150,21 @@ body {
 }
 
 /* Rest of your existing CSS remains the same */
+/* Existing CSS styles */
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+
