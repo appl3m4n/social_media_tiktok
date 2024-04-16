@@ -132,6 +132,7 @@ body {
 .header {
     position: sticky;
     top: 0;
+    margin-bottom: 6vh;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     z-index: 1000;
